@@ -227,6 +227,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     fastbootd
 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.fastbootd.available=true
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150
