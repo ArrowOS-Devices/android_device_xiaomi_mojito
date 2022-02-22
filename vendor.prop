@@ -80,6 +80,8 @@ vendor.audio.usb.disable.sidetone=true
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
+ro.vendor.audio.sdk.fluencetype=none
+persist.vendor.audio.voicecall.speaker.stereo=true
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
@@ -162,6 +164,11 @@ vendor.gralloc.disable_ubwc=0
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# HVDCP
+persist.vendor.cp.fcc_main_ua=400000
+persist.vendor.cp.taper_term_mv=6500
+persist.vendor.cp.vbus_offset_mv=1040
 
 # GPU
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
