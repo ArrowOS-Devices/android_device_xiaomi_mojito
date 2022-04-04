@@ -52,4 +52,7 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
+
+    <!-- Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
 </resources>
