@@ -1011,7 +1011,6 @@ vendor/radio/qcril_database/upgrade/9_version_update_ecc_table_127531.sql
 vendor/radio/qcril_database/qcril.db
 
 # Sensors
--vendor/bin/init.qcom.sensors.sh
 -vendor/bin/sensors.qti
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
