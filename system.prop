@@ -7,6 +7,9 @@ ro.charger.enable_suspend=true
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# Display
+debug.force_no_blanking=true
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q6150-17263-1
 
