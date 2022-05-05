@@ -79,7 +79,6 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libaudio-resampler \
     libvolumelistener \
     libtinycompress \
     libtinycompress.vendor
