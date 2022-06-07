@@ -18,7 +18,6 @@ static const variant_info_t mojito_info = {
     .marketname = "Redmi Note 10",
     .model = "M2101K7AG",
 
-    .nfc = false,
 };
 
 static const variant_info_t sunny_info = {
@@ -30,7 +29,6 @@ static const variant_info_t sunny_info = {
     .marketname = "Redmi Note 10",
     .model = "M2101K7AG",
 
-    .nfc = false,
 };
 
 static const std::vector<variant_info_t> variants = {

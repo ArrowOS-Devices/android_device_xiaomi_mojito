@@ -33,6 +33,4 @@ void set_variant_props(const variant_info_t variant) {
     set_ro_build_prop("marketname", variant.marketname, true);
     set_ro_build_prop("model", variant.model, true);
 
-    if (variant.nfc)
-        property_override(SKU_PROP, "nfc");
 }

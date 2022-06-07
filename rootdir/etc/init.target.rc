@@ -93,7 +93,6 @@ service mi_thermald /system/vendor/bin/mi_thermald
 
 on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
-    mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 

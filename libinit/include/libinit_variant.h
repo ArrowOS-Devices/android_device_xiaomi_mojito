@@ -19,7 +19,6 @@ typedef struct variant_info {
     std::string marketname;
     std::string model;
 
-    bool nfc;
 } variant_info_t;
 
 void search_variant(const std::vector<variant_info_t> variants);
