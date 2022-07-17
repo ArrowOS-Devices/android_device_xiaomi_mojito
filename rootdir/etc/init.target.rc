@@ -49,6 +49,11 @@ on init
     chown system system /dev/stune/top-app/schedtune.boost
     chown system system /dev/cpu_dma_latency
 
+    # Set thermal mode to evaluation
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    write /sys/class/thermal/thermal_message/sconfig 10
+
     chmod 0664 /dev/stune/top-app/schedtune.boost
     chmod 0664 /dev/cpu_dma_latency
 
@@ -110,10 +115,6 @@ on boot
     # Touch funtions permissions setting
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
-
-    # Set thermal mode to evaluation
-    chown system system /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 10
 
     # Set xiaomi touch permissions
     chown system system /dev/xiaomi-touch
