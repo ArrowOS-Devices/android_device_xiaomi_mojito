@@ -15,7 +15,8 @@ android_app {
     privileged: true,
 
     static_libs: [
-        "org.pixelexperience.settings.resources",
+        "org.lineageos.settings.resources",
+        "org.pixelexperience.settings.resources_custom",
     ],
 
     optimize: {
