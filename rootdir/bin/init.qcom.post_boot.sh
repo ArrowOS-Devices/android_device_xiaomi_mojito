@@ -78,6 +78,12 @@ function configure_memory_parameters() {
     echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
 }
 
+function configure_vbswap_parameters() {
+    echo 4294967296 > /sys/devices/virtual/block/vbswap0/disksize
+    mkswap /dev/block/vbswap0
+    swapon /dev/block/vbswap0
+}
+
 # Apply settings for sm6150
 # Set the default IRQ affinity to the silver cluster. When a
 # CPU is isolated/hotplugged, the IRQ affinity is adjusted
@@ -116,6 +122,11 @@ case "$soc_id" in
 
     # Set Memory parameters
     configure_memory_parameters
+
+    echo 0 > /proc/sys/vm/page-cluster
+
+    # Setup vbswap
+    configure_vbswap_parameters
 
     # Enable bus-dcvs
     for device in /sys/devices/platform/soc
