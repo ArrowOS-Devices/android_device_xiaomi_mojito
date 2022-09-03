@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fuse_mojito.mk
+    $(LOCAL_DIR)/arrow_mojito.mk
 	
