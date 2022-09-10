@@ -118,4 +118,11 @@ void vendor_load_properties() {
     }
 
     load_dalvik_properties();
+#ifdef __ANDROID_RECOVERY__
+    std::string buildtype = GetProperty("ro.build.type", "userdebug");
+    if (buildtype != "user") {
+        property_override("ro.debuggable", "1");
+        property_override("ro.adb.secure.recovery", "0");
+    }
+#endif
 }

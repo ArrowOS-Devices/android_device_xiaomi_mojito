@@ -7,10 +7,13 @@
 cc_library_static {
     name: "libinit_mojito",
     srcs: ["init_mojito.cpp"],
-    whole_static_libs: ["libbase"],
     recovery_available: true,
     include_dirs: [
         "system/libbase/include",
         "system/core/init"
-    ]
+    ],
+    shared_libs: [
+        "libbase",
+        "libfs_mgr",
+    ],
 }
