@@ -96,8 +96,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifest/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mojito
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mojito
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mojito
+TARGET_RECOVERY_DEVICE_MODULES := libinit_mojito
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
