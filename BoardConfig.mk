@@ -65,6 +65,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
+TARGET_OTA_ASSERT_DEVICE := mojito,sunny,mojito_global,sunny_global
 
 # Broken
 BUILD_BROKEN_DUP_RULES := true
