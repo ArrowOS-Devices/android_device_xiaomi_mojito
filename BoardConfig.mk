@@ -15,6 +15,7 @@ include vendor/xiaomi/mojito/BoardConfigVendor.mk
 AB_OTA_UPDATER := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 
 AB_OTA_PARTITIONS += \
     boot \
