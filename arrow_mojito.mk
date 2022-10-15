@@ -28,7 +28,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 DEVICE_MAINTAINER := sarthakroy2002, blur
 
 # Build
-BUILD_FINGERPRINT := "google/coral/coral:13/TP1A.220905.004/8927612:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:13/TP1A.221005.002/9012097:user/release-keys"
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 	
