@@ -70,6 +70,7 @@ TARGET_OTA_ASSERT_DEVICE := mojito,sunny,mojito_global,sunny_global
 
 # Broken
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # Camera
 TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
