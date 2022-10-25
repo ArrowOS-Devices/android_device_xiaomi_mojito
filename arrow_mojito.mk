@@ -26,6 +26,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # ArrowOS additions
 DEVICE_MAINTAINER := sarthakroy2002, blur
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Build
 BUILD_FINGERPRINT := "google/coral/coral:13/TP1A.221005.002/9012097:user/release-keys"
