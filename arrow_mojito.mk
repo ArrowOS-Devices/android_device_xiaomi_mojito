@@ -29,7 +29,7 @@ DEVICE_MAINTAINER := sarthakroy2002, blur
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Build
-BUILD_FINGERPRINT := "google/coral/coral:13/TP1A.221005.002/9012097:user/release-keys"
+BUILD_FINGERPRINT := "google/sunfish/sunfish:13/TP1A.221105.002/9080065:user/release-keys"
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
-	
+
