@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "KProfilesMojito",
+    system_ext_specific: true,
+    sdk_version: "current"
+}

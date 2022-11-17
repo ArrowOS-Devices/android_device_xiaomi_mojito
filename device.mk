@@ -373,6 +373,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     CarrierConfigMojito \
+    KProfilesMojito \
     FrameworksMojito \
     SettingsProviderMojito \
     SettingsMojito \
