@@ -227,7 +227,8 @@ on post-fs-data
     chmod 0770 /data/vendor/fm
 
     # Create PERFD deamon related dirs
-    mkdir /data/vendor/perfd 2770 root system
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
     rm /data/vendor/perfd/default_values
 
     # Create IOP  deamon related dirs
@@ -345,12 +346,6 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
-
-    service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
-    class hal
-    user system
-    group system input
-    override
 
 on property:init.svc.cnss_diag=running
     stop cnss_diag
