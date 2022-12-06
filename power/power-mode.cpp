@@ -1,35 +1,38 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2020-2021 The LineageOS Project
+ * Copyright (C) 2020-2021 Chaldeaprjkt
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ * *    * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above
+ *       copyright notice, this list of conditions and the following
+ *       disclaimer in the documentation and/or other materials provided
+ *       with the distribution.
+ *     * Neither the name of The Linux Foundation nor the names of its
+ *       contributors may be used to endorse or promote products derived
+ *       from this software without specific prior written permission.
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 #define LOG_TAG "QTI PowerHAL"
 
-#include <aidl/android/hardware/power/BnPower.h>
-#include <android-base/file.h>
-#include <android-base/logging.h>
-#include <sys/ioctl.h>
 #include <log/log.h>
 
-// defines from drivers/input/touchscreen/xiaomi/xiaomi_touch.h
-#define SET_CUR_VALUE 0
-#define Touch_Doubletap_Mode 14
-
-#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
-
-#define TOUCH_MAGIC 0x5400
-#define TOUCH_IOC_SETMODE TOUCH_MAGIC + SET_CUR_VALUE
+#include <aidl/android/hardware/power/BnPower.h>
 
 extern "C" {
 #include "hint-data.h"
@@ -76,11 +79,8 @@ namespace hardware {
 namespace power {
 namespace impl {
 
-bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
+bool isDeviceSpecificModeSupported(Mode type, bool *_aidl_return) {
     switch (type) {
-        case Mode::DOUBLE_TAP_TO_WAKE:
-            *_aidl_return = true;
-            return true;
         case Mode::LAUNCH:
             *_aidl_return = true;
             return true;
@@ -91,13 +91,6 @@ bool isDeviceSpecificModeSupported(Mode type, bool* _aidl_return) {
 
 bool setDeviceSpecificMode(Mode type, bool enabled) {
     switch (type) {
-        case Mode::DOUBLE_TAP_TO_WAKE: {
-            int fd = open(TOUCH_DEV_PATH, O_RDWR);
-            int arg[2] = {Touch_Doubletap_Mode, enabled ? 1 : 0};
-            ioctl(fd, TOUCH_IOC_SETMODE, &arg);
-            close(fd);
-            return true;
-        }
         case Mode::LAUNCH:
             process_activity_launch_hint(&enabled);
             return true;
@@ -106,8 +99,8 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
     }
 }
 
-}  // namespace impl
-}  // namespace power
-}  // namespace hardware
-}  // namespace android
-}  // namespace aidl
+} // namespace impl
+} // namespace power
+} // namespace hardware
+} // namespace android
+} // namespace aidl
