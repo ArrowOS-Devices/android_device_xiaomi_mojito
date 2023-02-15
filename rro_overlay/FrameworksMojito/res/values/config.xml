@@ -655,4 +655,7 @@
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">5</integer>
 
+     <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">Redmi/mojito/mojito:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys</string>
+
 </resources>
