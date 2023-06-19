@@ -149,7 +149,7 @@ PRODUCT_COPY_FILES += \
 
 # GCamGo
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V2
+    GCamGOPrebuilt-V3_8
 
 # Charger
 PRODUCT_PACKAGES += \
