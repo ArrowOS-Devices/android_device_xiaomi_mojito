@@ -114,8 +114,8 @@ void vendor_load_properties() {
         set_device_props(
             "Redmi", "sunny", "M2101K7AG", "sunny_global", "Redmi Note 10");
         property_override("ro.product.mod_device", "sunny_global");
-        property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys");
-        property_override("ro.build.description", "sunny-user 12 RKQ1.210614.002 V14.0.2.0.SKGMIXM release-keys");
+        property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.3.0.SKGMIXM:user/release-keys");
+        property_override("ro.build.description", "sunny-user 12 RKQ1.210614.002 V14.0.3.0.SKGMIXM release-keys");
     }
     property_override("vendor.usb.product_string", "Redmi Note 10");
     load_dalvik_properties();
