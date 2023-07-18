@@ -661,4 +661,7 @@
      <!-- Fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Redmi/mojito/mojito:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys</string>
 
+    <!-- Default value for performant auth feature. -->
+    <bool name="config_performantAuthDefault">true</bool>
+
 </resources>
